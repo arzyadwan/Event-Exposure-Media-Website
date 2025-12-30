@@ -1,151 +1,212 @@
 # VANGUARD EO — High-Impact Corporate Portfolio
 
-> A cinematic, high-performance portfolio website designed for a premium Event Organizer. Built with a focus on storytelling, business impact (ROI), and seamless user interaction.
+A cinematic, high-performance portfolio website for a premium **Event Organizer**, built with a strong focus on storytelling, measurable business impact (ROI), and seamless user experience.
 
 ![Project Status](https://img.shields.io/badge/status-production_ready-success)
-![Tech Stack](https://img.shields.io/badge/stack-Next.js_15_Quirk-black)
-
-## ⚡ The Stack (God Tier)
-
-This project uses a modern, high-performance stack optimized for SEO, Core Web Vitals, and User Experience.
-
--   **Framework:** [Next.js 15 (App Router)](https://nextjs.org/) - Server Side Rendering & SEO.
--   **Language:** [TypeScript](https://www.typescriptlang.org/) - Strict Type Safety (No `any` policy).
--   **Styling:** [Tailwind CSS](https://tailwindcss.com/) - Utility-first styling.
--   **Animation:** [Framer Motion](https://www.framer.com/motion/) - Complex micro-interactions & page transitions.
--   **Scroll Engine:** [Lenis](https://lenis.studiofreight.com/) - Virtual smooth scrolling for premium feel.
--   **CMS:** [Sanity.io](https://www.sanity.io/) - Headless CMS for structured content management.
--   **Video:** HTML5 Video / Cloudinary (Recommended).
+![Tech Stack](https://img.shields.io/badge/stack-Next.js_15-black)
 
 ---
 
-## 🚀 Key Features
+## Overview
 
-1.  **Cinematic Hero Section:** Full-screen video background with muted loop and animated typography.
-2.  **Strategic Case Studies:** Project detail pages focused on the "Challenge → Solution → Impact" narrative, not just image galleries.
-3.  **Strict Type Safety:** Comprehensive TypeScript interfaces for Sanity data fetching.
-4.  **Client-Side Filtering:** Animated filtering for portfolio categories without page reloads.
-5.  **Gatekeeper Contact Form:** Logic to filter leads based on budget range.
-6.  **Infinite Marquee:** Smooth-scrolling client logo loop.
-7.  **Glassmorphism UI:** Sticky navigation with backdrop blur effects.
+This project is designed as a **conversion-oriented corporate portfolio**, not a decorative showcase.
+Every section is engineered to communicate credibility, capability, and results.
+
+Key goals:
+
+* Strong first impression through cinematic visuals
+* Clear “Challenge → Solution → Impact” storytelling
+* High SEO score and excellent Core Web Vitals
+* Lead qualification before contact
 
 ---
 
-## 🛠️ Getting Started
+## Tech Stack
 
-Follow these steps to set up the project locally.
+This project uses a modern, performance-first stack optimized for SEO, scalability, and maintainability.
 
-### 1. Prerequisites
+* **Framework:** Next.js 15 (App Router) — Server-Side Rendering & SEO
+* **Language:** TypeScript — strict type safety (no `any` policy)
+* **Styling:** Tailwind CSS — utility-first, consistent design system
+* **Animation:** Framer Motion — micro-interactions and page transitions
+* **Scroll Engine:** Lenis — smooth virtual scrolling
+* **CMS:** Sanity.io — headless, structured content management
+* **Media:** HTML5 Video / Cloudinary (recommended)
 
--   Node.js 18+ installed.
--   npm or pnpm / yarn.
+---
 
-### 2. Clone & Install
+## Key Features
 
+1. **Cinematic Hero Section**
+   Full-screen video background with muted loop and animated typography.
+
+2. **Strategic Case Studies**
+   Dedicated project pages using the *Challenge → Solution → Impact* framework.
+
+3. **Strict Type Safety**
+   Fully typed Sanity queries and data models.
+
+4. **Client-Side Portfolio Filtering**
+   Animated category filters without page reloads.
+
+5. **Gatekeeper Contact Form**
+   Lead filtering based on predefined budget ranges.
+
+6. **Infinite Client Marquee**
+   Smooth, looping logo carousel.
+
+7. **Glassmorphism Navigation**
+   Sticky navbar with backdrop blur for a premium look.
+
+---
+
+## Getting Started
+
+### Prerequisites
+
+* Node.js 18+
+* npm, pnpm, or yarn
+
+---
+
+### Installation
+
+```bash
 # Clone the repository
-git clone [https://github.com/username/vanguard-eo.git](https://github.com/username/vanguard-eo.git)
+git clone https://github.com/username/vanguard-eo.git
 
-# Navigate to project directory
+# Navigate to the project directory
 cd vanguard-eo
 
 # Install dependencies
 npm install
-3. Environment Variables
-Create a .env.local file in the root directory. You need to connect to your Sanity Project.
+```
 
-Bash
+---
 
+### Environment Variables
+
+Create a `.env.local` file in the root directory.
+
+```bash
 NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id_here
 NEXT_PUBLIC_SANITY_DATASET=production
 NEXT_PUBLIC_SANITY_API_VERSION=2024-01-01
-Note: To find your Project ID, check sanity.config.ts in the studio folder or your Sanity Dashboard.
+```
 
-4. Run Development Server
-Bash
+To find your **Project ID**, check `sanity.config.ts` in the `/studio` folder or your Sanity dashboard.
 
+---
+
+### Run Development Server
+
+```bash
 npm run dev
-Open http://localhost:3000 to view the website.
+```
 
-🗄️ Managing Content (Sanity CMS)
-The CMS logic lives in the /studio folder but runs parallel to the frontend.
+Open `http://localhost:3000` in your browser.
 
-Running the Studio
-Open a new terminal tab and run:
+---
 
-Bash
+## Content Management (Sanity CMS)
 
-# Enter studio directory
+The CMS runs independently from the frontend and lives in the `/studio` directory.
+
+### Run Sanity Studio
+
+```bash
 cd studio
-
-# Install studio dependencies (first time only)
-npm install
-
-# Start Studio Server
+npm install   # first time only
 npm run dev
-Open http://localhost:3333 to access the CMS Dashboard.
+```
 
-Content Schemas
-Projects: Core portfolio items. Includes fields for Stats (Metrics), Challenge, Solution, Impact, and Gallery.
+Open `http://localhost:3333` to access the Sanity Studio dashboard.
 
-Services: List of expertise displayed on the homepage.
+---
 
-Featured Toggle: Use the isFeatured boolean in a Project document to display it on the Homepage Hero/Grid.
+### Content Schemas
 
-📂 Project Structure
-Plaintext
+* **Projects**
+  Core portfolio entries with:
 
+  * Challenge
+  * Solution
+  * Impact
+  * Metrics / Stats
+  * Gallery
+
+* **Services**
+  Expertise and offerings displayed on the homepage.
+
+* **Featured Projects**
+  Use the `isFeatured` boolean to highlight projects on the homepage.
+
+---
+
+## Project Structure
+
+```plaintext
 /app
   ├── about/           # About page
-  ├── contact/         # Contact page with logic
-  ├── work/            # Full Portfolio (Filterable)
-  │   └── [slug]/      # Dynamic Case Study Page
-  ├── layout.tsx       # Global Layout (Navbar/Footer/Fonts)
+  ├── contact/         # Contact page with lead logic
+  ├── work/            # Full portfolio (filterable)
+  │   └── [slug]/      # Dynamic case study page
+  ├── layout.tsx       # Global layout (navbar, footer, fonts)
   └── page.tsx         # Homepage
 
 /components
-  ├── HeroSection.tsx  # Video Background Component
-  ├── Navbar.tsx       # Sticky Glassmorphism Nav
-  ├── ProjectCard.tsx  # Reusable Card with Hover Effects
-  ├── WorkFeed.tsx     # Filter Logic Component
+  ├── HeroSection.tsx
+  ├── Navbar.tsx
+  ├── ProjectCard.tsx
+  ├── WorkFeed.tsx
   └── ...
 
 /lib
-  └── sanity.ts        # Sanity Client Configuration & Helpers
+  └── sanity.ts        # Sanity client & helpers
 
-/studio                # Sanity CMS Configuration & Schemas
-🚢 Deployment
-The easiest way to deploy is using Vercel.
+/studio                # Sanity CMS schemas & configuration
+```
 
-Push your code to GitHub.
+---
 
-Import the repository in Vercel.
+## Deployment
 
-Crucial: Add the Environment Variables (NEXT_PUBLIC_SANITY_PROJECT_ID, etc.) in the Vercel Project Settings.
+The recommended deployment platform is **Vercel**.
 
-Deploy.
+Steps:
 
-🤝 Contribution Guidelines
-No any Policy: Do not use the any type. Define interfaces for all data props.
+1. Push the repository to GitHub
+2. Import the project into Vercel
+3. Add all required environment variables in Vercel project settings
+4. Deploy
 
-Mobile First: Always check responsiveness on mobile view before pushing.
+---
 
-Optimization: Use next/image for all bitmaps. Compress videos before adding to the codebase/CMS.
+## Contribution Guidelines
 
-© 2025 Vanguard EO. Built for Impact.
+* **No `any` Policy**
+  All data must be typed explicitly.
 
+* **Mobile-First**
+  Always test responsiveness before pushing changes.
 
-***
+* **Performance First**
 
-### Langkah Terakhir dari Saya (Advisor)
+  * Use `next/image` for all images
+  * Compress videos before uploading
 
-Anda sekarang memiliki **Kode**, **Database**, dan **Dokumentasi**. Paket lengkap.
+---
 
-Jika Anda ingin portofolio ini benar-benar menghasilkan uang, jangan biarkan ini hanya ada di `localhost`.
+## Final Note
 
-**Tugas Penutup:**
-Deploy ke Vercel hari ini. Gratis.
-1.  Push ke GitHub.
-2.  Connect ke Vercel.
-3.  Masukkan Environment Variables.
+You already have the **code**, **CMS**, and **documentation**.
+The only thing left is exposure.
 
-Dunia tidak bisa menyewa Anda jika mereka tidak bisa melihat website Anda. Selamat bekerja.
+If this portfolio stays on `localhost`, it produces exactly zero value.
+
+Deploy it. Today.
+
+---
+
+© 2025 Vanguard EO
+Built for impact, not decoration.
