@@ -42,7 +42,6 @@ Follow these steps to set up the project locally.
 
 ### 2. Clone & Install
 
-```bash
 # Clone the repository
 git clone [https://github.com/username/vanguard-eo.git](https://github.com/username/vanguard-eo.git)
 
